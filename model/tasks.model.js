@@ -10,7 +10,7 @@ module.exports = tasks; */
 const mongoose = require("mongoose");
 
 // schema
-const taskSchmea = new mongoose.Schema({
+const taskSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true
@@ -29,5 +29,5 @@ const taskSchmea = new mongoose.Schema({
 
 // model -> it created a collection in database from backend
 // input -> collection_name, collection reference schema
-const Tasks = mongoose.model("tasks", taskSchmea);
+const Tasks = mongoose.model("tasks", taskSchema);
 module.exports = Tasks;
